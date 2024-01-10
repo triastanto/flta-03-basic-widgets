@@ -19,29 +19,29 @@ class Card1 extends StatelessWidget {
           height: 450,
         ),
         decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/mag1.png'),
-            fit: BoxFit.cover,
-          ),
-          borderRadius: BorderRadius.all(Radius.circular(10.0))
-        ),
+            image: DecorationImage(
+              image: AssetImage('assets/mag1.png'),
+              fit: BoxFit.cover,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(10.0))),
         child: Stack(
           children: [
-            Text(
-              category,
-              style: FooderlichTheme.darkTextTheme.bodyLarge
+            Text(category, style: FooderlichTheme.darkTextTheme.bodyLarge),
+            Positioned(
+              top: 20,
+              child: Text(title,
+                  style: FooderlichTheme.darkTextTheme.displayMedium),
             ),
-            Text(
-              title,
-              style: FooderlichTheme.darkTextTheme.displayMedium
+            Positioned(
+              bottom: 30,
+              right: 0,
+              child: Text(description,
+                  style: FooderlichTheme.darkTextTheme.bodyLarge),
             ),
-            Text(
-              description,
-              style: FooderlichTheme.darkTextTheme.bodyLarge
-            ),
-            Text(
-              chef,
-              style: FooderlichTheme.darkTextTheme.bodyLarge
+            Positioned(
+              bottom: 10,
+              right: 0,
+              child: Text(chef, style: FooderlichTheme.darkTextTheme.bodyLarge),
             ),
           ],
         ),
