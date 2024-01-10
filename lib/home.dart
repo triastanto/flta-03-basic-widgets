@@ -24,7 +24,24 @@ class HomeState extends State<Home> {
           style: Theme.of(context).textTheme.displayLarge,
         ),
       ),
-      // TODO: Add bottom navigation bar
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
+        // TODO: Set selected tab bar
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card2',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card3',
+          ),
+        ],
+      ),
     );
   }
 }
